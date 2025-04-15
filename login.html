@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Login | MR</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/templatemo-style.css" />
+  <link rel="icon" type="image/png" href="img/mr-logo.png">
+</head>
+
+<body>
+  <div class="tm-page-container mx-auto">
+    <header class="tm-header text-center">
+      <h1 class="tm-title text-uppercase">Private Cloud</h1>
+      <p class="tm-primary-color"><i>Zugang nur für Melih</i></p>
+    </header>
+
+    <section class="tm-section">
+      <div class="tm-content-container">
+        <figure class="mb-0">
+          <img src="img/img-1.jpg" alt="Image" class="img-fluid tm-img" />
+        </figure>
+        <div class="tm-content">
+          <h2 class="tm-page-title">Anmeldung</h2>
+          <p>Bitte gib dein Passwort ein, um fortzufahren:</p>
+          <input type="password" id="passwordInput" class="form-control mb-3" placeholder="Passwort" />
+          <button onclick="checkPassword()" class="btn btn-primary">Login</button>
+          <p id="errorMsg" style="color: red; margin-top: 10px;"></p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>© 2025 Melih Rahmiev | Alle Rechte vorbehalten.</span>
+      <span>a MR production</span>
+    </footer>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const password = document.getElementById("passwordInput").value;
+      const correctPassword = "geheim123"; // <- Hier kannst du dein Passwort anpassen
+
+      if (password === correctPassword) {
+        window.location.href = "cloud.html";
+      } else {
+        document.getElementById("errorMsg").textContent = "Falsches Passwort. Versuch es nochmal.";
+      }
+    }
+  </script>
+</body>
+
+</html>
