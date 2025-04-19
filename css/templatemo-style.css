@@ -214,9 +214,10 @@ figure.effect-bubba:hover img {
 }
 
 figure.effect-bubba:hover figcaption {
-  color: #3399ff; /* Bläulicher Text */
-  background-color: white; /* Hintergrund bleibt weiß */
+  background-color: rgba(255, 255, 255, 0.7); /* halbtransparenter weißer Hintergrund */
+  color: #3399ff; /* bläulicher Text */
 }
+
 
 figure.effect-bubba figcaption::before,
 figure.effect-bubba figcaption::after {
